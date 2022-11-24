@@ -3,7 +3,7 @@
 
     $userText = $_GET["usertext"];
 
-    $censoredText = str_replace($badword, "***", $usertext);
+    $censoredText = str_replace( $_GET["badword"] , "***", $_GET["usertext"]);
 
 ?>
 
@@ -23,7 +23,7 @@
     
     <h2>Qui il testo censurato</h2>
     <p> <?php echo $censoredText; ?>
-    <p> <?php echo strlen($censoredText); ?></p>
+    <p> <?php echo (strlen($censoredText) -3); ?></p>
 
     <a href="index.php">Ritorna alla home</a>
 
