@@ -1,9 +1,11 @@
 <?php
-    $badword = $_GET["badword"];
+    $badword = $GET["badword"];
 
     $userText = $_GET["usertext"];
 
-    $censoredText = str_replace( $_GET["badword"] , "***", $_GET["usertext"]);
+    var_dump($_GET);
+
+    $censoredText = str_replace( $badword , "***", $userText);
 
 ?>
 
@@ -23,7 +25,7 @@
     
     <h2>Qui il testo censurato</h2>
     <p> <?php echo $censoredText; ?>
-    <p> <?php echo (strlen($censoredText) -3); ?></p>
+    <p> <?php echo (strlen($censoredText)) ; ?></p>
 
     <a href="index.php">Ritorna alla home</a>
 
