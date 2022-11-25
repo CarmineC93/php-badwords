@@ -1,5 +1,5 @@
 <?php
-    $badword = $GET["badword"];
+    $badword = $_GET["badword"];
 
     $userText = $_GET["usertext"];
 
